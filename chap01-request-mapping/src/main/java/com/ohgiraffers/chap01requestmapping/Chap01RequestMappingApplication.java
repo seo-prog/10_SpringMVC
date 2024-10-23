@@ -1,0 +1,14 @@
+package com.ohgiraffers.chap01requestmapping;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class Chap01RequestMappingApplication {
+    // 여기서 직접 지정해준 실행부 ! 따로 main 을 만들지 않는다.
+
+    public static void main(String[] args) {
+        SpringApplication.run(Chap01RequestMappingApplication.class, args);
+    }
+
+}

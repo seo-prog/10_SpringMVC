@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> Spring MVC mapping 테스트</h1>
+<h2>1. 메소드에 요청 매핑하기</h2>
+
+<h3>get : /menu/regist</h3>
+<button onclick="location.href='/menu/regist'">GET 메뉴 등록 요청</button>
+<!--a 태그도 가능-->
+<!--post, get 상관없이 요청 다 받을 슈 이싿.-->
+<h3>Post : /menu/regist</h3>
+<form action="/menu/regist" method="post">
+    <button type="submit">Post 메뉴 등록 요청</button>
+</form>
+
+
+
+<h3>GET: /menu/modify</h3>
+<button onclick="location.href='/menu/modify'">get 메뉴 수정 요청</button>
+
+<h3>Post : /menu/modify</h3>
+<form action="/menu/modify" method="post">
+    <button type="submit">Post 메뉴 등록 요청</button>
+</form>
+
+<h3>get : /menu/delete</h3>
+<button onclick="location.href='/menu/delete'">get 메뉴 요청 삭제 요청</button>
+
+<h3>post: /manu/delete</h3>
+<form action ="/menu/delete" method="post">
+<button type="submit">Post 메뉴 삭제 요청</button>
+</form>
+
+<h2>2. 클래스에 요청 매핑하기</h2>
+<h3>get : /order/regist</h3>
+<button onclick="location.href='/order/regist'">get 주문 등록 요청</button>
+
+<h3>post : /order/modify</h3>
+<form action="/order/modify" method="post">
+    <button type="submit">post 주문 요청 수정</button>
+    </form>
+
+<h3>get : /menu/{orderNo}</h3>
+<button onclick="location.href='/order/detail/3'">get 주문 상세 보기</button>
+
+
+
+
+</body>
+</html>
+
+<!--실행을 해보면 콘솔창에 Tomcat started on port 8080 이 뜨는데. 이 의미는
+우리 컴퓨터에서 localhost:8080 에 대한 요청에 응답을 이 페이지를 보여줄꺼야 라는 의미.-->
