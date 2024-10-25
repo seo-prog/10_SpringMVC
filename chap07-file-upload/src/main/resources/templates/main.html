@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<h1>파일 업로드 하기</h1>
+
+<h3>single file 업로드하기</h3>
+<form action="single-file" method="post" enctype="multipart/form-data">
+<!--  multipart/form-data 는 사용가자 폼에 입력한 데이터를 여러 부분으로 나누어서 전송할 수 있게 해준다..
+    각 부분은 다른 데이터 유형을 포함할 수 있르며, 주로 파일 업로드시 사용된다.. 파일을 포함한 폼 데이터 전송 시 필수적이다..-->
+    파일 : <input type="file" name="singleFile" multiple/><br/>
+    파일 설명 : <input type="text" name="singleFileDescription"/><br/>
+    <button type="submit">전송 !</button>
+</form>
+
+<h3>Multi file 업로드</h3>
+<form action="multi-file" method="post" enctype="multipart/form-data">
+        파일 : <input type="file" name="multiFile" multiple/><br/>
+        파일 설명 : <input type="text" name="multiFile" multiple><br/>
+    <button type="submit">전송 !</button>
+</form>
+
 </body>
 </html>
