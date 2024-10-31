@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <script th:inline="javascript">
+        alert([[${message}]]);
+        window.location.replace("/auth/login");
+    //     오류가 나면 이리로 와서 메세지를 띄워주고 다시 login 페이지로 요청 보낸다는 뜻
+    </script>
+
+</body>
+</html>

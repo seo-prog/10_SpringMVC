@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<div sec:authorize ="hasAnyAuthority('ADMIN')"> 이 권한을 가지면 밑에 메세지가 출력되도록 함-->
+
+    <div sec:authorize ="hasAnyAuthority('ADMIN')">
+        <p>welcome, admin !</p>
+    </div>
+
+</body>
+</html>
