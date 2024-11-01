@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <h1>웹소켓 채팅 로그인 창</h1>
+    <form id="loginForm">
+        <label>사용할 아이디 입력</label>
+        <input type="text" id="userId" name="userId" required/>
+        <button type="submit">채팅방 입장</button>
+    </form>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event){ // submit 이 발동되면 function 동작해라 ! 라는 의미.
+            event.preventDefault(); // 폼의 기본 동작을 막음. // 위에서 어떻게 동작하든 여기로 와서 동작해ㄹㅏ !( 혹시나 폼태그가 이상한 동작 할까봐 막아둠)
+            let userId = document.getElementById("userId").value.trim(); // trim -> ( 빈 문자열 일까봐 )공백 제거
+            if(userId !== ""){
+                location.href = "/chat?userId=" + encodeURIComponent(userId);
+                // encodeURIComponent -> 한글 닉네임 깨지지말라고 해줌.(인코딩)
+            }else{
+                alert("아이디를 입력하세요 !");
+            }
+        });
+
+    </script>
+
+</body>
+</html>
